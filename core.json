@@ -31158,9 +31158,7 @@
     "is_staff": true,
     "foto": null,
     "tipo_usuario": 3,
-    "groups": [
-      1
-    ],
+    "groups": [],
     "user_permissions": []
   }
 },
@@ -31177,9 +31175,7 @@
     "is_staff": true,
     "foto": null,
     "tipo_usuario": 1,
-    "groups": [
-      2
-    ],
+    "groups": [],
     "user_permissions": []
   }
 },
@@ -31196,10 +31192,7 @@
     "is_staff": true,
     "foto": null,
     "tipo_usuario": 1,
-    "groups": [
-      2,
-      3
-    ],
+    "groups": [],
     "user_permissions": []
   }
 },
