@@ -1,7 +1,7 @@
 from django.db import transaction
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
-from drf_spectacular.utils import extend_schema, inline_serializer
+from drf_spectacular.utils import extend_schema, extend_schema_view, inline_serializer
 from rest_framework import serializers, status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -19,6 +19,41 @@ from core.serializers import (
 )
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="Listar compras",
+        description="Retorna a lista de compras. Administradores e gerentes vêem todas as compras; usuários comuns vêem apenas as próprias.",
+        responses={200: CompraListSerializer(many=True)},
+    ),
+    retrieve=extend_schema(
+        summary="Detalhar compra",
+        description="Retorna os dados completos de uma compra específica.",
+        responses={200: CompraSerializer},
+    ),
+    create=extend_schema(
+        summary="Criar compra",
+        description="Cria um novo carrinho de compras com os itens informados.",
+        request=CompraCreateUpdateSerializer,
+        responses={201: CompraCreateUpdateSerializer, 400: None},
+    ),
+    update=extend_schema(
+        summary="Atualizar compra",
+        description="Substitui todos os itens de uma compra existente.",
+        request=CompraCreateUpdateSerializer,
+        responses={200: CompraCreateUpdateSerializer, 400: None, 404: None},
+    ),
+    partial_update=extend_schema(
+        summary="Atualizar compra parcialmente",
+        description="Atualiza parcialmente os itens de uma compra existente.",
+        request=CompraCreateUpdateSerializer,
+        responses={200: CompraCreateUpdateSerializer, 400: None, 404: None},
+    ),
+    destroy=extend_schema(
+        summary="Remover compra",
+        description="Remove uma compra do sistema.",
+        responses={204: None, 404: None},
+    ),
+)
 class CompraViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ['usuario__email', 'status', 'data']
@@ -47,8 +82,16 @@ class CompraViewSet(ModelViewSet):
 
     @extend_schema(
         summary="Finalizar compra",
-        description="Finaliza a compra do carrinho de compras do usuário autenticado.",
-        responses={200: None, 400: None, 404: None},
+        description="Finaliza a compra do carrinho do usuário autenticado. Retorna 400 se a compra já foi finalizada ou se algum item ultrapassar o estoque disponível.",
+        responses={
+            200: inline_serializer('FinalizarOkResponse', fields={'status': serializers.CharField()}),
+            400: inline_serializer('FinalizarErroResponse', fields={
+                'status': serializers.CharField(),
+                'livro': serializers.CharField(required=False),
+                'quantidade_disponivel': serializers.IntegerField(required=False),
+            }),
+            404: None,
+        },
     )
     @action(detail=True, methods=['post'])
     def finalizar(self, request, pk=None):
