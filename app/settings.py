@@ -20,6 +20,8 @@ ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:8000',
+    'https://livraria-marrcandre-front.class.fabricadesoftware.ifc.edu.br',
+    'https://livraria-marrcandre-front.vercel.app',
 ]
 
 # Application definition

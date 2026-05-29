@@ -1,5 +1,5 @@
 [project]
-name = "livraria"
+name = "livraria-marrcandre-back"
 version = "1.0.0"
 description = "Uma API REST de uma livraria feita com Django e Django REST Framework."
 authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
