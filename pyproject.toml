@@ -15,9 +15,7 @@ dependencies = [
   'gunicorn>=21.2.0',
   # 'mysqlclient>=2.2.4',
   "djangorestframework-simplejwt>=5.5.1",
-  'netifaces>=0.11.0',
   'Pillow>=10.3.0',
-  'pre-commit>=3.5.0',
   'psycopg2-binary>=2.9.9',
   'pydotplus>=2.0.2',
   'python-dotenv>=1.0.0',
@@ -26,17 +24,16 @@ dependencies = [
   'setuptools>=68.2.2',
   'uvicorn>=0.29.0',
   'whitenoise[brotli]>=6.6.0',
-  "django-debug-toolbar>=6.2.0",
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 license = { text = "MIT" }
 
-[tool.pdm]
-distribution = false
-
-[tool.pdm.autoexport]
-filename = "requirements.txt"
-without-hashes = true
+[dependency-groups]
+dev = [
+  "django-debug-toolbar>=6.2.0",
+  "ipython>=8.26.0",
+  "ruff>=0.11.2",
+]
 
 [tool.ruff]
 line-length = 120
@@ -50,27 +47,3 @@ ignore = ["PLR6301"]
 [tool.ruff.format]
 preview = true
 quote-style = 'single'
-
-[tool.pdm.scripts]
-devbase = "python manage.py runserver 127.0.0.1:8000"
-dev = "uvicorn app.asgi:application --host 0.0.0.0 --port 8000 --reload"
-prod = "gunicorn app.asgi:application -k uvicorn.workers.UvicornWorker --bind 127.0.0.1:8000 --workers 4 --threads 2 --timeout 60 --access-logfile - --error-logfile -"
-createsuperuser = "python manage.py createsuperuser"
-pre_migrate = "python manage.py makemigrations"
-migrate = "python manage.py migrate"
-post_migrate = "python manage.py graph_models -S -g -o core.png core"
-shell = "python manage.py shell"
-shellp = "python manage.py shell_plus"
-test = "python manage.py test"
-loaddata = "python manage.py loaddata core.json"
-dumpdata = "python manage.py dumpdata --indent 2"
-cria_api = "python ./scripts/cria_api.py {args}"
-check = "ruff check"
-pre_format = "ruff check --fix"
-format = "ruff format"
-
-[dependency-groups]
-dev = ["pylint>=3.0.2", "ipython>=8.26.0", "ruff>=0.11.2"]
-pdm-plugins = [
-    "pdm-autoexport>=0.2.0",
-]
