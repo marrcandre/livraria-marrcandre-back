@@ -1,91 +1,119 @@
-# Template de projeto Django com DRF e PDM
+# Livraria API (Django + DRF + uv)
 
-Esse é um template de projeto Django com DRF, PDM e muito mais. Ele já vem com algumas configurações e pacotes pré-instalados, como o [PDM](https://pdm.fming.dev/), [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [PostgreSQL](https://www.postgresql.org/), [SQLite](https://www.sqlite.org/index.html), [Swagger](https://swagger.io/), [Black](), [isort](), [Fl0](), [Cloudinary](), [Corsheaders](), [Django-Extensions](), [Django-Filter](), [dotenv](), [drf-spectacular](), [gunicon](), [netifaces]() e [whitenoise]().
+API REST de uma livraria desenvolvida com Django e Django REST Framework (DRF), gerenciada com [uv](https://docs.astral.sh/uv/) e padronizada com o linter/formatador [Ruff](https://docs.astral.sh/ruff/).
 
-Esse template já está pronto para ser utilizado em produção, com o [Fl0](http://fl0.com) e o [PostgreSQL](https://www.postgresql.org/). Mas também pode ser utilizado em desenvolvimento, com o [PDM](https://pdm.fming.dev/) e o [SQLite](https://www.sqlite.org/index.html).
+## Tecnologias Utilizadas
 
-O template também já vem com alguns arquivos de configuração pré-configurados, como:
+- [Python 3.14](https://www.python.org/)
+- [uv](https://docs.astral.sh/uv/): Gerenciador de pacotes e ambientes virtuais ultrarrápido para Python.
+- [Django](https://www.djangoproject.com/) & [Django REST Framework](https://www.django-rest-framework.org/): Framework web e toolkit para construção de Web APIs.
+- [Ruff](https://docs.astral.sh/ruff/): Linter e formatador de código Python de alta performance.
+- [SQLite](https://www.sqlite.org/): Banco de dados relacional para desenvolvimento local.
+- [PostgreSQL](https://www.postgresql.org/): Banco de dados relacional para produção.
+- [drf-spectacular](https://drf-spectacular.readthedocs.io/): Geração de esquemas OpenAPI 3 e documentação Swagger / Redoc.
+- [SimpleJWT](https://django-rest-framework-simplejwt.readthedocs.io/): Autenticação via JWT.
+- [Cloudinary](https://cloudinary.com/): Armazenamento de arquivos de mídia em nuvem.
+- [WhiteNoise](http://whitenoise.evans.io/): Servidor de arquivos estáticos.
+- [Gunicorn](https://gunicorn.org/) / [Uvicorn](https://www.uvicorn.org/): Servidores WSGI / ASGI.
+- [Django-Extensions](https://django-extensions.readthedocs.io/): Ferramentas adicionais como `shell_plus` e `graph_models`.
+- [Django-Filter](https://django-filter.readthedocs.io/): Filtragem de dados em APIs REST.
 
-- `pyproject.toml`: Arquivo de configuração do PDM.
-- `Procfile`: Arquivo de configuração do Fl0.
-- `settings.py`: Arquivo de configuração do Django.
-- `urls.py`: Arquivo de configuração das rotas do Django.
-- `wsgi.py`: Arquivo de configuração do Gunicorn.
-- `.env.exemplo`: Arquivo de exemplo de configuração das variáveis de ambiente.
-- `.gitignore`: Arquivo de configuração do Git, para ignorar arquivos e diretórios.
-
-O template também traz o usuário padrão modificado, com o login sendo feito com o `e-mail` e não com o `username`. Inclusões de campos, como `telefone`, `data de nascimento` e `foto de perfil`, podem ser feitas facilmente.
-
+---
 
 ## Instalação e Configuração
 
-1. Certifique-se de ter o [Python](https://www.python.org/) instalado em seu sistema.
+### 1. Pré-requisitos
 
-2. Clone este repositório usando o seguinte comando:
+Certifique-se de ter o `uv` instalado em seu sistema:
 
-   ```
-   git clone https://github.com/marrcandre/template_django_pdm.git
-   ```
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
-3. Navegue até o diretório da API:
+### 2. Clonar o repositório e instalar dependências
 
-   ```
-   cd template_django_pdm
-   ```
+```bash
+git clone https://github.com/marrcandre/livraria-marrcandre-back.git
+cd livraria-marrcandre-back
 
-4. Crie um ambiente virtual usando o [PDM](https://pdm.fming.dev/):
+# Sincroniza o ambiente virtual (.venv) e instala todas as dependências
+make sync
+# ou diretamente via uv:
+uv sync --all-groups
+```
 
-   ```
-   pdm install
-   ```
+### 3. Configurar variáveis de ambiente
 
-5. Crie o arquivo .env, a partir do arquivo .env.exemplo, e configure as variáveis de ambiente:
+Crie o arquivo `.env` a partir do modelo `.env.example`:
 
-   ```
-   cp .env.exemplo .env
-   ```
+```bash
+cp .env.example .env
+```
 
-6. Execute o servidor de desenvolvimento:
+### 4. Executar as migrações e carregar dados iniciais
 
-   ```
-   pdm run dev
-   ```
+```bash
+make migrate
+make loaddata  # Carrega os dados de exemplo do core.json
+```
 
-7. Acesse a API em http://localhost:19005/api/
+### 5. Iniciar o servidor de desenvolvimento
 
-## Uso da API
+```bash
+make dev
+```
 
-A documentação completa dos endpoints da API e exemplos de uso estão disponíveis na [Documentação da API](http://localhost:19005/api/swagger/).
+A API estará disponível em: `http://127.0.0.1:8000/api/`
 
-## Comandos Úteis
+---
 
-- `pdm run dev`: Executa o servidor de desenvolvimento. Antes de executar o servidor, descobre o endereço IP da máquina e atualiza o arquivo `.env` com o endereço IP.
-- `pdm run migrate`: Executa as migrações do banco de dados. Antes de executar o `migrate`, executa o `makemigrations`. Depois de executar o `migrate`, executa o `graph_models`, atualizando o diagrama de classes dos modelos do projeto.
+## Documentação da API
 
-## Detalhes do Projeto
+- **Swagger UI**: `http://127.0.0.1:8000/api/doc/`
+- **Redoc**: `http://127.0.0.1:8000/api/redoc/`
+- **Schema OpenAPI**: `http://127.0.0.1:8000/api/schema/`
 
-Esse projeto utiliza os seguintes pacotes e tecnologias:
+---
 
-- [PDM](https://pdm.fming.dev/): Gerenciador de pacotes e ambiente virtual para Python.
-- [Django](https://www.djangoproject.com/): Framework web de alto nível escrito em Python.
-- [Django REST Framework](https://www.django-rest-framework.org/): Framework para desenvolvimento de APIs REST com Django.
-- [PostgreSQL](https://www.postgresql.org/): Banco de dados relacional, utilizado no ambiente de produção.
-- [SQLite](https://www.sqlite.org/index.html): Banco de dados relacional, utilizado no ambiente de desenvolvimento.
-- [Swagger](https://swagger.io/): Framework para documentação de APIs REST.
-- [Black](https://github.com/psf/black): Ferramenta de formatação de código Python.
-- [isort](https://pycqa.github.io/isort/): Ferramenta de ordenação de imports Python.
-- [Fl0](http://fl0.com): Ferramenta de _deploy_ de aplicações backend e banco de dados.
-- [Cloudinary](https://cloudinary.com/): Serviço de armazenamento de arquivos estáticos em nuvem.
-- [Corsheaders](https://pypi.org/project/django-cors-headers/): Pacote para habilitar o CORS em aplicações Django. O CORS é utilizado para permitir que aplicações frontend acessem a API.
-- [Django-Extensions](https://django-extensions.readthedocs.io/en/latest/): Pacote com extensões para o Django, como o `shell_plus`, que permite acessar o shell do Django com todos os modelos importados e o comando `graph_models`, que gera um diagrama de classes dos modelos do projeto.
-- [Django-Filter](https://django-filter.readthedocs.io/en/stable/): Pacote para filtragem, ordenação e paginação de dados em APIs REST.
-- [dotenv](https://pypi.org/project/python-dotenv/): Pacote para carregar variáveis de ambiente a partir de um arquivo `.env`.
-- [drf-spectacular](https://drf-spectacular.readthedocs.io/en/latest/): Pacote para geração de documentação de APIs REST com o Swagger.
-- [gunicon](https://gunicorn.org/): Pacote para servir aplicações Django em produção.
-- [netifaces](https://pypi.org/project/netifaces/): Pacote para obter o endereço IP da máquina.
-- [whitenoise](http://whitenoise.evans.io/en/stable/): Pacote para servir arquivos estáticos em aplicações Django.
+## Comandos Úteis (Makefile)
+
+O projeto possui um `Makefile` com atalhos para os comandos mais comuns:
+
+### Ambiente e Dependências
+- `make sync`: Sincroniza o ambiente com `uv.lock`.
+- `make lock`: Atualiza o arquivo `uv.lock`.
+- `make upgrade`: Atualiza todas as dependências.
+- `make tree`: Exibe a árvore de dependências.
+- `make add package=PACOTE`: Adiciona uma dependência de produção.
+- `make add-dev package=PACOTE`: Adiciona uma dependência de desenvolvimento.
+- `make remove package=PACOTE`: Remove uma dependência.
+
+### Django
+- `make dev`: Inicia o servidor com Uvicorn (`http://0.0.0.0:8000`).
+- `make dev-django`: Inicia com o `runserver` padrão do Django.
+- `make makemigrations`: Cria novas migrations.
+- `make migrate`: Aplica as migrations pendentes.
+- `make migrations`: Cria migrations, aplica e gera o diagrama de modelos (`core.png`).
+- `make createsuperuser`: Cria um superusuário.
+- `make shell` / `make shellp`: Abre o Django Shell / Shell Plus.
+- `make graph-models`: Gera o diagrama dos modelos (`core.png`).
+- `make check-django`: Valida a configuração do Django.
+- `make test`: Executa a suíte de testes.
+- `make loaddata`: Carrega dados de `core.json`.
+- `make dumpdata`: Exporta os dados para JSON.
+
+### Qualidade de Código (Ruff)
+- `make lint`: Verifica o código com o Ruff.
+- `make lint-fix`: Aplica correções automáticas de lint.
+- `make format`: Formata o código com o Ruff.
+- `make format-check`: Verifica a formatação sem modificar os arquivos.
+- `make quality`: Executa lint e verificação de formatação.
+
+### Deploy
+- `make deploy-check`: Executa verificações de pré-deploy do Django com `--locked`.
+
+---
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença GPL](https://www.gnu.org/licenses/gpl-3.0.html), uma licença de software livre.
-
+Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
