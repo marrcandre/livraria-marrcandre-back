@@ -13,7 +13,6 @@ dependencies = [
   'djangorestframework>=3.14.0',
   'drf-spectacular>=0.26.5',
   'gunicorn>=21.2.0',
-  # 'mysqlclient>=2.2.4',
   "djangorestframework-simplejwt>=5.5.1",
   'Pillow>=10.3.0',
   'psycopg2-binary>=2.9.9',
@@ -30,7 +29,6 @@ license = { text = "MIT" }
 
 [dependency-groups]
 dev = [
-  "django-debug-toolbar>=6.2.0",
   "ipython>=8.26.0",
   "ruff>=0.11.2",
 ]

@@ -68,9 +68,6 @@ INSTALLED_APPS = [
     'core',
 ]
 
-if DEBUG:
-    INSTALLED_APPS.append('debug_toolbar')
-
 # ============================================================
 # Middlewares
 # ============================================================
@@ -86,9 +83,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-if DEBUG:
-    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
 # ============================================================
 # URLs
