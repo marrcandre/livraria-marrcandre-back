@@ -1,0 +1,4022 @@
+[
+  {
+    "model": "core.compra",
+    "pk": 1001,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-01T09:00:00Z",
+      "total": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5001,
+    "fields": {
+      "compra": 1001,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1002,
+    "fields": {
+      "usuario": 3,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-08T10:13:17Z",
+      "total": "171.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5002,
+    "fields": {
+      "compra": 1002,
+      "livro": 4,
+      "quantidade": 3,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1003,
+    "fields": {
+      "usuario": 3,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-15T11:26:34Z",
+      "total": "121.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5003,
+    "fields": {
+      "compra": 1003,
+      "livro": 11,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5004,
+    "fields": {
+      "compra": 1003,
+      "livro": 19,
+      "quantidade": 2,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1004,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-05T12:39:51Z",
+      "total": "182.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5005,
+    "fields": {
+      "compra": 1004,
+      "livro": 14,
+      "quantidade": 1,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5006,
+    "fields": {
+      "compra": 1004,
+      "livro": 23,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5007,
+    "fields": {
+      "compra": 1004,
+      "livro": 32,
+      "quantidade": 1,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1005,
+    "fields": {
+      "usuario": 3,
+      "status": 3,
+      "tipo_pagamento": 5,
+      "data": "2026-08-12T13:52:08Z",
+      "total": "420.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5008,
+    "fields": {
+      "compra": 1005,
+      "livro": 20,
+      "quantidade": 1,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5009,
+    "fields": {
+      "compra": 1005,
+      "livro": 26,
+      "quantidade": 2,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5010,
+    "fields": {
+      "compra": 1005,
+      "livro": 36,
+      "quantidade": 1,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5011,
+    "fields": {
+      "compra": 1005,
+      "livro": 4,
+      "quantidade": 3,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1006,
+    "fields": {
+      "usuario": 3,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-02T14:05:25Z",
+      "total": "42.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5012,
+    "fields": {
+      "compra": 1006,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1007,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-09T15:18:42Z",
+      "total": "262.72"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5013,
+    "fields": {
+      "compra": 1007,
+      "livro": 30,
+      "quantidade": 2,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5014,
+    "fields": {
+      "compra": 1007,
+      "livro": 37,
+      "quantidade": 4,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1008,
+    "fields": {
+      "usuario": 3,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-16T16:31:59Z",
+      "total": "288.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5015,
+    "fields": {
+      "compra": 1008,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5016,
+    "fields": {
+      "compra": 1008,
+      "livro": 3,
+      "quantidade": 3,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5017,
+    "fields": {
+      "compra": 1008,
+      "livro": 12,
+      "quantidade": 2,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1009,
+    "fields": {
+      "usuario": 3,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-06T17:44:16Z",
+      "total": "203.77"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5018,
+    "fields": {
+      "compra": 1009,
+      "livro": 1,
+      "quantidade": 2,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5019,
+    "fields": {
+      "compra": 1009,
+      "livro": 8,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5020,
+    "fields": {
+      "compra": 1009,
+      "livro": 17,
+      "quantidade": 3,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5021,
+    "fields": {
+      "compra": 1009,
+      "livro": 24,
+      "quantidade": 1,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1010,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-07-13T09:57:33Z",
+      "total": "228.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5022,
+    "fields": {
+      "compra": 1010,
+      "livro": 4,
+      "quantidade": 4,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1011,
+    "fields": {
+      "usuario": 3,
+      "status": 3,
+      "tipo_pagamento": 1,
+      "data": "2026-08-03T10:10:50Z",
+      "total": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5023,
+    "fields": {
+      "compra": 1011,
+      "livro": 11,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1012,
+    "fields": {
+      "usuario": 3,
+      "status": 4,
+      "tipo_pagamento": 2,
+      "data": "2026-09-10T11:23:07Z",
+      "total": "188.97"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5024,
+    "fields": {
+      "compra": 1012,
+      "livro": 14,
+      "quantidade": 3,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1013,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-07-17T12:36:24Z",
+      "total": "208.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5025,
+    "fields": {
+      "compra": 1013,
+      "livro": 20,
+      "quantidade": 1,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5026,
+    "fields": {
+      "compra": 1013,
+      "livro": 26,
+      "quantidade": 2,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1014,
+    "fields": {
+      "usuario": 3,
+      "status": 3,
+      "tipo_pagamento": 4,
+      "data": "2026-08-07T13:49:41Z",
+      "total": "121.04"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5027,
+    "fields": {
+      "compra": 1014,
+      "livro": 24,
+      "quantidade": 1,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5028,
+    "fields": {
+      "compra": 1014,
+      "livro": 34,
+      "quantidade": 2,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5029,
+    "fields": {
+      "compra": 1014,
+      "livro": 2,
+      "quantidade": 1,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1015,
+    "fields": {
+      "usuario": 3,
+      "status": 4,
+      "tipo_pagamento": 5,
+      "data": "2026-09-14T14:02:58Z",
+      "total": "377.32"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5030,
+    "fields": {
+      "compra": 1015,
+      "livro": 30,
+      "quantidade": 1,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5031,
+    "fields": {
+      "compra": 1015,
+      "livro": 37,
+      "quantidade": 2,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5032,
+    "fields": {
+      "compra": 1015,
+      "livro": 7,
+      "quantidade": 1,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5033,
+    "fields": {
+      "compra": 1015,
+      "livro": 14,
+      "quantidade": 3,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1016,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-04T15:15:15Z",
+      "total": "99.06"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5034,
+    "fields": {
+      "compra": 1016,
+      "livro": 35,
+      "quantidade": 2,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1017,
+    "fields": {
+      "usuario": 3,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-11T16:28:32Z",
+      "total": "197.80"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5035,
+    "fields": {
+      "compra": 1017,
+      "livro": 1,
+      "quantidade": 2,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5036,
+    "fields": {
+      "compra": 1017,
+      "livro": 8,
+      "quantidade": 4,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1018,
+    "fields": {
+      "usuario": 3,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-01T17:41:49Z",
+      "total": "286.80"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5037,
+    "fields": {
+      "compra": 1018,
+      "livro": 4,
+      "quantidade": 1,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5038,
+    "fields": {
+      "compra": 1018,
+      "livro": 13,
+      "quantidade": 3,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5039,
+    "fields": {
+      "compra": 1018,
+      "livro": 21,
+      "quantidade": 2,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1019,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-08T09:54:06Z",
+      "total": "419.30"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5040,
+    "fields": {
+      "compra": 1019,
+      "livro": 11,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5041,
+    "fields": {
+      "compra": 1019,
+      "livro": 19,
+      "quantidade": 1,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5042,
+    "fields": {
+      "compra": 1019,
+      "livro": 25,
+      "quantidade": 3,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5043,
+    "fields": {
+      "compra": 1019,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1020,
+    "fields": {
+      "usuario": 3,
+      "status": 1,
+      "tipo_pagamento": 5,
+      "data": "2026-08-15T10:07:23Z",
+      "total": "251.96"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5044,
+    "fields": {
+      "compra": 1020,
+      "livro": 14,
+      "quantidade": 4,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1021,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-08T11:20:40Z",
+      "total": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5045,
+    "fields": {
+      "compra": 1021,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1022,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-15T12:33:57Z",
+      "total": "241.77"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5046,
+    "fields": {
+      "compra": 1022,
+      "livro": 25,
+      "quantidade": 3,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1023,
+    "fields": {
+      "usuario": 6,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-05T13:46:14Z",
+      "total": "47.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5047,
+    "fields": {
+      "compra": 1023,
+      "livro": 32,
+      "quantidade": 1,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5048,
+    "fields": {
+      "compra": 1023,
+      "livro": 1,
+      "quantidade": 2,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1024,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-12T14:59:31Z",
+      "total": "192.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5049,
+    "fields": {
+      "compra": 1024,
+      "livro": 36,
+      "quantidade": 1,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5050,
+    "fields": {
+      "compra": 1024,
+      "livro": 4,
+      "quantidade": 2,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5051,
+    "fields": {
+      "compra": 1024,
+      "livro": 13,
+      "quantidade": 1,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1025,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-07-02T15:12:48Z",
+      "total": "380.01"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5052,
+    "fields": {
+      "compra": 1025,
+      "livro": 2,
+      "quantidade": 1,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5053,
+    "fields": {
+      "compra": 1025,
+      "livro": 11,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5054,
+    "fields": {
+      "compra": 1025,
+      "livro": 19,
+      "quantidade": 1,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5055,
+    "fields": {
+      "compra": 1025,
+      "livro": 25,
+      "quantidade": 3,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1026,
+    "fields": {
+      "usuario": 6,
+      "status": 3,
+      "tipo_pagamento": 1,
+      "data": "2026-08-09T16:25:05Z",
+      "total": "113.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5056,
+    "fields": {
+      "compra": 1026,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1027,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 2,
+      "data": "2026-09-16T17:38:22Z",
+      "total": "224.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5057,
+    "fields": {
+      "compra": 1027,
+      "livro": 12,
+      "quantidade": 2,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5058,
+    "fields": {
+      "compra": 1027,
+      "livro": 20,
+      "quantidade": 4,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1028,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-07-06T09:51:39Z",
+      "total": "192.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5059,
+    "fields": {
+      "compra": 1028,
+      "livro": 17,
+      "quantidade": 1,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5060,
+    "fields": {
+      "compra": 1028,
+      "livro": 24,
+      "quantidade": 3,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5061,
+    "fields": {
+      "compra": 1028,
+      "livro": 34,
+      "quantidade": 2,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1029,
+    "fields": {
+      "usuario": 6,
+      "status": 3,
+      "tipo_pagamento": 4,
+      "data": "2026-08-13T10:04:56Z",
+      "total": "344.94"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5062,
+    "fields": {
+      "compra": 1029,
+      "livro": 21,
+      "quantidade": 2,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5063,
+    "fields": {
+      "compra": 1029,
+      "livro": 30,
+      "quantidade": 1,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5064,
+    "fields": {
+      "compra": 1029,
+      "livro": 37,
+      "quantidade": 3,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5065,
+    "fields": {
+      "compra": 1029,
+      "livro": 7,
+      "quantidade": 1,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1030,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 5,
+      "data": "2026-09-03T11:17:13Z",
+      "total": "322.36"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5066,
+    "fields": {
+      "compra": 1030,
+      "livro": 25,
+      "quantidade": 4,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1031,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-10T12:30:30Z",
+      "total": "29.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5067,
+    "fields": {
+      "compra": 1031,
+      "livro": 32,
+      "quantidade": 1,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1032,
+    "fields": {
+      "usuario": 6,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-17T13:43:47Z",
+      "total": "125.64"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5068,
+    "fields": {
+      "compra": 1032,
+      "livro": 36,
+      "quantidade": 3,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1033,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-07T14:56:04Z",
+      "total": "100.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5069,
+    "fields": {
+      "compra": 1033,
+      "livro": 2,
+      "quantidade": 1,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5070,
+    "fields": {
+      "compra": 1033,
+      "livro": 11,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1034,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-14T15:09:21Z",
+      "total": "227.97"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5071,
+    "fields": {
+      "compra": 1034,
+      "livro": 7,
+      "quantidade": 1,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5072,
+    "fields": {
+      "compra": 1034,
+      "livro": 14,
+      "quantidade": 2,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5073,
+    "fields": {
+      "compra": 1034,
+      "livro": 23,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1035,
+    "fields": {
+      "usuario": 6,
+      "status": 3,
+      "tipo_pagamento": 5,
+      "data": "2026-08-04T16:22:38Z",
+      "total": "326.64"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5074,
+    "fields": {
+      "compra": 1035,
+      "livro": 12,
+      "quantidade": 1,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5075,
+    "fields": {
+      "compra": 1035,
+      "livro": 20,
+      "quantidade": 2,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5076,
+    "fields": {
+      "compra": 1035,
+      "livro": 26,
+      "quantidade": 1,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5077,
+    "fields": {
+      "compra": 1035,
+      "livro": 36,
+      "quantidade": 3,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1036,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-11T17:35:55Z",
+      "total": "79.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5078,
+    "fields": {
+      "compra": 1036,
+      "livro": 17,
+      "quantidade": 2,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1037,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-01T09:48:12Z",
+      "total": "341.92"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5079,
+    "fields": {
+      "compra": 1037,
+      "livro": 21,
+      "quantidade": 2,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5080,
+    "fields": {
+      "compra": 1037,
+      "livro": 30,
+      "quantidade": 4,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1038,
+    "fields": {
+      "usuario": 6,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-08T10:01:29Z",
+      "total": "319.18"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5081,
+    "fields": {
+      "compra": 1038,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5082,
+    "fields": {
+      "compra": 1038,
+      "livro": 35,
+      "quantidade": 3,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5083,
+    "fields": {
+      "compra": 1038,
+      "livro": 3,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1039,
+    "fields": {
+      "usuario": 6,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-15T11:14:46Z",
+      "total": "243.87"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5084,
+    "fields": {
+      "compra": 1039,
+      "livro": 32,
+      "quantidade": 2,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5085,
+    "fields": {
+      "compra": 1039,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5086,
+    "fields": {
+      "compra": 1039,
+      "livro": 8,
+      "quantidade": 3,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5087,
+    "fields": {
+      "compra": 1039,
+      "livro": 17,
+      "quantidade": 1,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1040,
+    "fields": {
+      "usuario": 6,
+      "status": 1,
+      "tipo_pagamento": 5,
+      "data": "2026-07-05T12:27:03Z",
+      "total": "167.52"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5088,
+    "fields": {
+      "compra": 1040,
+      "livro": 36,
+      "quantidade": 4,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1041,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 1,
+      "data": "2026-08-15T13:40:20Z",
+      "total": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5089,
+    "fields": {
+      "compra": 1041,
+      "livro": 3,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1042,
+    "fields": {
+      "usuario": 7,
+      "status": 4,
+      "tipo_pagamento": 2,
+      "data": "2026-09-05T14:53:37Z",
+      "total": "135.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5090,
+    "fields": {
+      "compra": 1042,
+      "livro": 8,
+      "quantidade": 3,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1043,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-07-12T15:06:54Z",
+      "total": "155.80"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5091,
+    "fields": {
+      "compra": 1043,
+      "livro": 13,
+      "quantidade": 1,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5092,
+    "fields": {
+      "compra": 1043,
+      "livro": 21,
+      "quantidade": 2,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1044,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 4,
+      "data": "2026-08-02T16:19:11Z",
+      "total": "248.71"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5093,
+    "fields": {
+      "compra": 1044,
+      "livro": 19,
+      "quantidade": 1,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5094,
+    "fields": {
+      "compra": 1044,
+      "livro": 25,
+      "quantidade": 2,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5095,
+    "fields": {
+      "compra": 1044,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1045,
+    "fields": {
+      "usuario": 7,
+      "status": 4,
+      "tipo_pagamento": 5,
+      "data": "2026-09-09T17:32:28Z",
+      "total": "248.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5096,
+    "fields": {
+      "compra": 1045,
+      "livro": 23,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5097,
+    "fields": {
+      "compra": 1045,
+      "livro": 32,
+      "quantidade": 2,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5098,
+    "fields": {
+      "compra": 1045,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5099,
+    "fields": {
+      "compra": 1045,
+      "livro": 8,
+      "quantidade": 3,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1046,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-16T09:45:45Z",
+      "total": "178.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5100,
+    "fields": {
+      "compra": 1046,
+      "livro": 26,
+      "quantidade": 2,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1047,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-06T10:58:02Z",
+      "total": "130.76"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5101,
+    "fields": {
+      "compra": 1047,
+      "livro": 34,
+      "quantidade": 2,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5102,
+    "fields": {
+      "compra": 1047,
+      "livro": 2,
+      "quantidade": 4,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1048,
+    "fields": {
+      "usuario": 7,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-13T11:11:19Z",
+      "total": "334.74"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5103,
+    "fields": {
+      "compra": 1048,
+      "livro": 37,
+      "quantidade": 1,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5104,
+    "fields": {
+      "compra": 1048,
+      "livro": 7,
+      "quantidade": 3,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5105,
+    "fields": {
+      "compra": 1048,
+      "livro": 14,
+      "quantidade": 2,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1049,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-03T12:24:36Z",
+      "total": "321.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5106,
+    "fields": {
+      "compra": 1049,
+      "livro": 3,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5107,
+    "fields": {
+      "compra": 1049,
+      "livro": 12,
+      "quantidade": 1,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5108,
+    "fields": {
+      "compra": 1049,
+      "livro": 20,
+      "quantidade": 3,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5109,
+    "fields": {
+      "compra": 1049,
+      "livro": 26,
+      "quantidade": 1,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1050,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 5,
+      "data": "2026-08-10T13:37:53Z",
+      "total": "180.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5110,
+    "fields": {
+      "compra": 1050,
+      "livro": 8,
+      "quantidade": 4,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1051,
+    "fields": {
+      "usuario": 7,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-17T14:50:10Z",
+      "total": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5111,
+    "fields": {
+      "compra": 1051,
+      "livro": 13,
+      "quantidade": 1,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1052,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-07T15:03:27Z",
+      "total": "114.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5112,
+    "fields": {
+      "compra": 1052,
+      "livro": 19,
+      "quantidade": 3,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1053,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-14T16:16:44Z",
+      "total": "104.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5113,
+    "fields": {
+      "compra": 1053,
+      "livro": 23,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5114,
+    "fields": {
+      "compra": 1053,
+      "livro": 32,
+      "quantidade": 2,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1054,
+    "fields": {
+      "usuario": 7,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-04T17:29:01Z",
+      "total": "229.76"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5115,
+    "fields": {
+      "compra": 1054,
+      "livro": 26,
+      "quantidade": 1,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5116,
+    "fields": {
+      "compra": 1054,
+      "livro": 36,
+      "quantidade": 2,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5117,
+    "fields": {
+      "compra": 1054,
+      "livro": 4,
+      "quantidade": 1,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1055,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-07-11T09:42:18Z",
+      "total": "224.38"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5118,
+    "fields": {
+      "compra": 1055,
+      "livro": 34,
+      "quantidade": 1,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5119,
+    "fields": {
+      "compra": 1055,
+      "livro": 2,
+      "quantidade": 2,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5120,
+    "fields": {
+      "compra": 1055,
+      "livro": 11,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5121,
+    "fields": {
+      "compra": 1055,
+      "livro": 19,
+      "quantidade": 3,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1056,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 1,
+      "data": "2026-08-01T10:55:35Z",
+      "total": "75.58"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5122,
+    "fields": {
+      "compra": 1056,
+      "livro": 37,
+      "quantidade": 2,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1057,
+    "fields": {
+      "usuario": 7,
+      "status": 4,
+      "tipo_pagamento": 2,
+      "data": "2026-09-08T11:08:52Z",
+      "total": "298.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5123,
+    "fields": {
+      "compra": 1057,
+      "livro": 3,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5124,
+    "fields": {
+      "compra": 1057,
+      "livro": 12,
+      "quantidade": 4,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1058,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-07-15T12:21:09Z",
+      "total": "206.97"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5125,
+    "fields": {
+      "compra": 1058,
+      "livro": 8,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5126,
+    "fields": {
+      "compra": 1058,
+      "livro": 17,
+      "quantidade": 3,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5127,
+    "fields": {
+      "compra": 1058,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1059,
+    "fields": {
+      "usuario": 7,
+      "status": 3,
+      "tipo_pagamento": 4,
+      "data": "2026-08-05T13:34:26Z",
+      "total": "338.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5128,
+    "fields": {
+      "compra": 1059,
+      "livro": 13,
+      "quantidade": 2,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5129,
+    "fields": {
+      "compra": 1059,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5130,
+    "fields": {
+      "compra": 1059,
+      "livro": 30,
+      "quantidade": 3,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5131,
+    "fields": {
+      "compra": 1059,
+      "livro": 37,
+      "quantidade": 1,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1060,
+    "fields": {
+      "usuario": 7,
+      "status": 1,
+      "tipo_pagamento": 5,
+      "data": "2026-09-12T14:47:43Z",
+      "total": "152.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5132,
+    "fields": {
+      "compra": 1060,
+      "livro": 19,
+      "quantidade": 4,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1061,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-05T15:00:00Z",
+      "total": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5133,
+    "fields": {
+      "compra": 1061,
+      "livro": 24,
+      "quantidade": 1,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1062,
+    "fields": {
+      "usuario": 8,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-12T16:13:17Z",
+      "total": "167.34"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5134,
+    "fields": {
+      "compra": 1062,
+      "livro": 30,
+      "quantidade": 3,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1063,
+    "fields": {
+      "usuario": 8,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-02T17:26:34Z",
+      "total": "139.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5135,
+    "fields": {
+      "compra": 1063,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5136,
+    "fields": {
+      "compra": 1063,
+      "livro": 3,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1064,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-09T09:39:51Z",
+      "total": "138.89"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5137,
+    "fields": {
+      "compra": 1064,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5138,
+    "fields": {
+      "compra": 1064,
+      "livro": 8,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5139,
+    "fields": {
+      "compra": 1064,
+      "livro": 17,
+      "quantidade": 1,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1065,
+    "fields": {
+      "usuario": 8,
+      "status": 3,
+      "tipo_pagamento": 5,
+      "data": "2026-08-16T10:52:08Z",
+      "total": "357.74"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5140,
+    "fields": {
+      "compra": 1065,
+      "livro": 4,
+      "quantidade": 1,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5141,
+    "fields": {
+      "compra": 1065,
+      "livro": 13,
+      "quantidade": 2,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5142,
+    "fields": {
+      "compra": 1065,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5143,
+    "fields": {
+      "compra": 1065,
+      "livro": 30,
+      "quantidade": 3,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1066,
+    "fields": {
+      "usuario": 8,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-06T11:05:25Z",
+      "total": "90.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5144,
+    "fields": {
+      "compra": 1066,
+      "livro": 11,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1067,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-13T12:18:42Z",
+      "total": "305.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5145,
+    "fields": {
+      "compra": 1067,
+      "livro": 14,
+      "quantidade": 2,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5146,
+    "fields": {
+      "compra": 1067,
+      "livro": 23,
+      "quantidade": 4,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1068,
+    "fields": {
+      "usuario": 8,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-03T13:31:59Z",
+      "total": "380.76"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5147,
+    "fields": {
+      "compra": 1068,
+      "livro": 20,
+      "quantidade": 1,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5148,
+    "fields": {
+      "compra": 1068,
+      "livro": 26,
+      "quantidade": 3,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5149,
+    "fields": {
+      "compra": 1068,
+      "livro": 36,
+      "quantidade": 2,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1069,
+    "fields": {
+      "usuario": 8,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-10T14:44:16Z",
+      "total": "162.62"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5150,
+    "fields": {
+      "compra": 1069,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5151,
+    "fields": {
+      "compra": 1069,
+      "livro": 34,
+      "quantidade": 1,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5152,
+    "fields": {
+      "compra": 1069,
+      "livro": 2,
+      "quantidade": 3,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5153,
+    "fields": {
+      "compra": 1069,
+      "livro": 11,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1070,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-07-17T15:57:33Z",
+      "total": "223.12"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5154,
+    "fields": {
+      "compra": 1070,
+      "livro": 30,
+      "quantidade": 4,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1071,
+    "fields": {
+      "usuario": 8,
+      "status": 3,
+      "tipo_pagamento": 1,
+      "data": "2026-08-07T16:10:50Z",
+      "total": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5155,
+    "fields": {
+      "compra": 1071,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1072,
+    "fields": {
+      "usuario": 8,
+      "status": 4,
+      "tipo_pagamento": 2,
+      "data": "2026-09-14T17:23:07Z",
+      "total": "26.70"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5156,
+    "fields": {
+      "compra": 1072,
+      "livro": 1,
+      "quantidade": 3,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1073,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-07-04T09:36:24Z",
+      "total": "131.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5157,
+    "fields": {
+      "compra": 1073,
+      "livro": 4,
+      "quantidade": 1,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5158,
+    "fields": {
+      "compra": 1073,
+      "livro": 13,
+      "quantidade": 2,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1074,
+    "fields": {
+      "usuario": 8,
+      "status": 3,
+      "tipo_pagamento": 4,
+      "data": "2026-08-11T10:49:41Z",
+      "total": "201.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5159,
+    "fields": {
+      "compra": 1074,
+      "livro": 11,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5160,
+    "fields": {
+      "compra": 1074,
+      "livro": 19,
+      "quantidade": 2,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5161,
+    "fields": {
+      "compra": 1074,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1075,
+    "fields": {
+      "usuario": 8,
+      "status": 4,
+      "tipo_pagamento": 5,
+      "data": "2026-09-01T11:02:58Z",
+      "total": "209.68"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5162,
+    "fields": {
+      "compra": 1075,
+      "livro": 14,
+      "quantidade": 1,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5163,
+    "fields": {
+      "compra": 1075,
+      "livro": 23,
+      "quantidade": 2,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5164,
+    "fields": {
+      "compra": 1075,
+      "livro": 32,
+      "quantidade": 1,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5165,
+    "fields": {
+      "compra": 1075,
+      "livro": 1,
+      "quantidade": 3,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1076,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-08T12:15:15Z",
+      "total": "60.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5166,
+    "fields": {
+      "compra": 1076,
+      "livro": 20,
+      "quantidade": 2,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1077,
+    "fields": {
+      "usuario": 8,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-15T13:28:32Z",
+      "total": "221.60"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5167,
+    "fields": {
+      "compra": 1077,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5168,
+    "fields": {
+      "compra": 1077,
+      "livro": 34,
+      "quantidade": 4,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1078,
+    "fields": {
+      "usuario": 8,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-05T14:41:49Z",
+      "total": "283.13"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5169,
+    "fields": {
+      "compra": 1078,
+      "livro": 30,
+      "quantidade": 1,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5170,
+    "fields": {
+      "compra": 1078,
+      "livro": 37,
+      "quantidade": 3,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5171,
+    "fields": {
+      "compra": 1078,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1079,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-12T15:54:06Z",
+      "total": "330.06"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5172,
+    "fields": {
+      "compra": 1079,
+      "livro": 35,
+      "quantidade": 2,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5173,
+    "fields": {
+      "compra": 1079,
+      "livro": 3,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5174,
+    "fields": {
+      "compra": 1079,
+      "livro": 12,
+      "quantidade": 3,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5175,
+    "fields": {
+      "compra": 1079,
+      "livro": 20,
+      "quantidade": 1,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1080,
+    "fields": {
+      "usuario": 8,
+      "status": 1,
+      "tipo_pagamento": 5,
+      "data": "2026-08-02T16:07:23Z",
+      "total": "35.60"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5176,
+    "fields": {
+      "compra": 1080,
+      "livro": 1,
+      "quantidade": 4,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1081,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-12T17:20:40Z",
+      "total": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5177,
+    "fields": {
+      "compra": 1081,
+      "livro": 7,
+      "quantidade": 1,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1082,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-02T09:33:57Z",
+      "total": "156.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5178,
+    "fields": {
+      "compra": 1082,
+      "livro": 12,
+      "quantidade": 3,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1083,
+    "fields": {
+      "usuario": 9,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-09T10:46:14Z",
+      "total": "81.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5179,
+    "fields": {
+      "compra": 1083,
+      "livro": 17,
+      "quantidade": 1,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5180,
+    "fields": {
+      "compra": 1083,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1084,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-16T11:59:31Z",
+      "total": "208.75"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5181,
+    "fields": {
+      "compra": 1084,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5182,
+    "fields": {
+      "compra": 1084,
+      "livro": 30,
+      "quantidade": 2,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5183,
+    "fields": {
+      "compra": 1084,
+      "livro": 37,
+      "quantidade": 1,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1085,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-07-06T12:12:48Z",
+      "total": "380.65"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5184,
+    "fields": {
+      "compra": 1085,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5185,
+    "fields": {
+      "compra": 1085,
+      "livro": 35,
+      "quantidade": 2,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5186,
+    "fields": {
+      "compra": 1085,
+      "livro": 3,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5187,
+    "fields": {
+      "compra": 1085,
+      "livro": 12,
+      "quantidade": 3,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1086,
+    "fields": {
+      "usuario": 9,
+      "status": 3,
+      "tipo_pagamento": 1,
+      "data": "2026-08-13T13:25:05Z",
+      "total": "59.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5188,
+    "fields": {
+      "compra": 1086,
+      "livro": 32,
+      "quantidade": 2,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1087,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 2,
+      "data": "2026-09-03T14:38:22Z",
+      "total": "311.76"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5189,
+    "fields": {
+      "compra": 1087,
+      "livro": 36,
+      "quantidade": 2,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5190,
+    "fields": {
+      "compra": 1087,
+      "livro": 4,
+      "quantidade": 4,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1088,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-07-10T15:51:39Z",
+      "total": "221.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5191,
+    "fields": {
+      "compra": 1088,
+      "livro": 2,
+      "quantidade": 1,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5192,
+    "fields": {
+      "compra": 1088,
+      "livro": 11,
+      "quantidade": 3,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5193,
+    "fields": {
+      "compra": 1088,
+      "livro": 19,
+      "quantidade": 2,
+      "preco": "38.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1089,
+    "fields": {
+      "usuario": 9,
+      "status": 3,
+      "tipo_pagamento": 4,
+      "data": "2026-08-17T16:04:56Z",
+      "total": "341.96"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5194,
+    "fields": {
+      "compra": 1089,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5195,
+    "fields": {
+      "compra": 1089,
+      "livro": 14,
+      "quantidade": 1,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5196,
+    "fields": {
+      "compra": 1089,
+      "livro": 23,
+      "quantidade": 3,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5197,
+    "fields": {
+      "compra": 1089,
+      "livro": 32,
+      "quantidade": 1,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1090,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 5,
+      "data": "2026-09-07T17:17:13Z",
+      "total": "208.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5198,
+    "fields": {
+      "compra": 1090,
+      "livro": 12,
+      "quantidade": 4,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1091,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-07-14T09:30:30Z",
+      "total": "39.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5199,
+    "fields": {
+      "compra": 1091,
+      "livro": 17,
+      "quantidade": 1,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1092,
+    "fields": {
+      "usuario": 9,
+      "status": 3,
+      "tipo_pagamento": 2,
+      "data": "2026-08-04T10:43:47Z",
+      "total": "178.20"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5200,
+    "fields": {
+      "compra": 1092,
+      "livro": 21,
+      "quantidade": 3,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1093,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 3,
+      "data": "2026-09-11T11:56:04Z",
+      "total": "179.65"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5201,
+    "fields": {
+      "compra": 1093,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5202,
+    "fields": {
+      "compra": 1093,
+      "livro": 35,
+      "quantidade": 2,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1094,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-07-01T12:09:21Z",
+      "total": "92.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5203,
+    "fields": {
+      "compra": 1094,
+      "livro": 32,
+      "quantidade": 1,
+      "preco": "29.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5204,
+    "fields": {
+      "compra": 1094,
+      "livro": 1,
+      "quantidade": 2,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5205,
+    "fields": {
+      "compra": 1094,
+      "livro": 8,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1095,
+    "fields": {
+      "usuario": 9,
+      "status": 3,
+      "tipo_pagamento": 5,
+      "data": "2026-08-08T13:22:38Z",
+      "total": "371.08"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5206,
+    "fields": {
+      "compra": 1095,
+      "livro": 36,
+      "quantidade": 1,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5207,
+    "fields": {
+      "compra": 1095,
+      "livro": 4,
+      "quantidade": 2,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5208,
+    "fields": {
+      "compra": 1095,
+      "livro": 13,
+      "quantidade": 1,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5209,
+    "fields": {
+      "compra": 1095,
+      "livro": 21,
+      "quantidade": 3,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1096,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 1,
+      "data": "2026-09-15T14:35:55Z",
+      "total": "20.48"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5210,
+    "fields": {
+      "compra": 1096,
+      "livro": 2,
+      "quantidade": 2,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1097,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-07-05T15:48:12Z",
+      "total": "365.94"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5211,
+    "fields": {
+      "compra": 1097,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5212,
+    "fields": {
+      "compra": 1097,
+      "livro": 14,
+      "quantidade": 4,
+      "preco": "62.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1098,
+    "fields": {
+      "usuario": 9,
+      "status": 3,
+      "tipo_pagamento": 3,
+      "data": "2026-08-12T16:01:29Z",
+      "total": "320.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5213,
+    "fields": {
+      "compra": 1098,
+      "livro": 12,
+      "quantidade": 1,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5214,
+    "fields": {
+      "compra": 1098,
+      "livro": 20,
+      "quantidade": 3,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5215,
+    "fields": {
+      "compra": 1098,
+      "livro": 26,
+      "quantidade": 2,
+      "preco": "89.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1099,
+    "fields": {
+      "usuario": 9,
+      "status": 4,
+      "tipo_pagamento": 4,
+      "data": "2026-09-02T17:14:46Z",
+      "total": "245.92"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5216,
+    "fields": {
+      "compra": 1099,
+      "livro": 17,
+      "quantidade": 2,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5217,
+    "fields": {
+      "compra": 1099,
+      "livro": 24,
+      "quantidade": 1,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5218,
+    "fields": {
+      "compra": 1099,
+      "livro": 34,
+      "quantidade": 3,
+      "preco": "44.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5219,
+    "fields": {
+      "compra": 1099,
+      "livro": 2,
+      "quantidade": 1,
+      "preco": "10.24"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1100,
+    "fields": {
+      "usuario": 9,
+      "status": 1,
+      "tipo_pagamento": 5,
+      "data": "2026-07-09T09:27:03Z",
+      "total": "237.60"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5220,
+    "fields": {
+      "compra": 1100,
+      "livro": 21,
+      "quantidade": 4,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1101,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-09-01T10:00:00Z",
+      "total": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5221,
+    "fields": {
+      "compra": 1101,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1102,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-09-03T11:11:00Z",
+      "total": "158.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5222,
+    "fields": {
+      "compra": 1102,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5223,
+    "fields": {
+      "compra": 1102,
+      "livro": 8,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1103,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-09-05T12:22:00Z",
+      "total": "242.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5224,
+    "fields": {
+      "compra": 1103,
+      "livro": 12,
+      "quantidade": 1,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5225,
+    "fields": {
+      "compra": 1103,
+      "livro": 13,
+      "quantidade": 3,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5226,
+    "fields": {
+      "compra": 1103,
+      "livro": 17,
+      "quantidade": 2,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1104,
+    "fields": {
+      "usuario": 3,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-09-07T13:33:00Z",
+      "total": "241.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5227,
+    "fields": {
+      "compra": 1104,
+      "livro": 20,
+      "quantidade": 2,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5228,
+    "fields": {
+      "compra": 1104,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5229,
+    "fields": {
+      "compra": 1104,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5230,
+    "fields": {
+      "compra": 1104,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1105,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-09-09T10:44:00Z",
+      "total": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5231,
+    "fields": {
+      "compra": 1105,
+      "livro": 20,
+      "quantidade": 1,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1106,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-09-11T11:55:00Z",
+      "total": "216.96"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5232,
+    "fields": {
+      "compra": 1106,
+      "livro": 25,
+      "quantidade": 2,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5233,
+    "fields": {
+      "compra": 1106,
+      "livro": 30,
+      "quantidade": 1,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1107,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-09-13T12:06:00Z",
+      "total": "250.75"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5234,
+    "fields": {
+      "compra": 1107,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5235,
+    "fields": {
+      "compra": 1107,
+      "livro": 36,
+      "quantidade": 3,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5236,
+    "fields": {
+      "compra": 1107,
+      "livro": 37,
+      "quantidade": 2,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1108,
+    "fields": {
+      "usuario": 6,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-09-15T13:17:00Z",
+      "total": "233.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5237,
+    "fields": {
+      "compra": 1108,
+      "livro": 1,
+      "quantidade": 2,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5238,
+    "fields": {
+      "compra": 1108,
+      "livro": 3,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5239,
+    "fields": {
+      "compra": 1108,
+      "livro": 4,
+      "quantidade": 2,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5240,
+    "fields": {
+      "compra": 1108,
+      "livro": 7,
+      "quantidade": 1,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1109,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-09-17T10:28:00Z",
+      "total": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5241,
+    "fields": {
+      "compra": 1109,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1110,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-09-02T11:39:00Z",
+      "total": "158.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5242,
+    "fields": {
+      "compra": 1110,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5243,
+    "fields": {
+      "compra": 1110,
+      "livro": 8,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1111,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-09-04T12:50:00Z",
+      "total": "242.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5244,
+    "fields": {
+      "compra": 1111,
+      "livro": 12,
+      "quantidade": 1,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5245,
+    "fields": {
+      "compra": 1111,
+      "livro": 13,
+      "quantidade": 3,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5246,
+    "fields": {
+      "compra": 1111,
+      "livro": 17,
+      "quantidade": 2,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1112,
+    "fields": {
+      "usuario": 7,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-09-06T13:01:00Z",
+      "total": "241.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5247,
+    "fields": {
+      "compra": 1112,
+      "livro": 20,
+      "quantidade": 2,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5248,
+    "fields": {
+      "compra": 1112,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5249,
+    "fields": {
+      "compra": 1112,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5250,
+    "fields": {
+      "compra": 1112,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1113,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-09-08T10:12:00Z",
+      "total": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5251,
+    "fields": {
+      "compra": 1113,
+      "livro": 20,
+      "quantidade": 1,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1114,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-09-10T11:23:00Z",
+      "total": "216.96"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5252,
+    "fields": {
+      "compra": 1114,
+      "livro": 25,
+      "quantidade": 2,
+      "preco": "80.59"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5253,
+    "fields": {
+      "compra": 1114,
+      "livro": 30,
+      "quantidade": 1,
+      "preco": "55.78"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1115,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-09-12T12:34:00Z",
+      "total": "250.75"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5254,
+    "fields": {
+      "compra": 1115,
+      "livro": 35,
+      "quantidade": 1,
+      "preco": "49.53"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5255,
+    "fields": {
+      "compra": 1115,
+      "livro": 36,
+      "quantidade": 3,
+      "preco": "41.88"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5256,
+    "fields": {
+      "compra": 1115,
+      "livro": 37,
+      "quantidade": 2,
+      "preco": "37.79"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1116,
+    "fields": {
+      "usuario": 8,
+      "status": 2,
+      "tipo_pagamento": 1,
+      "data": "2026-09-14T13:45:00Z",
+      "total": "233.79"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5257,
+    "fields": {
+      "compra": 1116,
+      "livro": 1,
+      "quantidade": 2,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5258,
+    "fields": {
+      "compra": 1116,
+      "livro": 3,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5259,
+    "fields": {
+      "compra": 1116,
+      "livro": 4,
+      "quantidade": 2,
+      "preco": "57.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5260,
+    "fields": {
+      "compra": 1116,
+      "livro": 7,
+      "quantidade": 1,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1117,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 2,
+      "data": "2026-09-16T10:56:00Z",
+      "total": "8.90"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5261,
+    "fields": {
+      "compra": 1117,
+      "livro": 1,
+      "quantidade": 1,
+      "preco": "8.90"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1118,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 3,
+      "data": "2026-09-01T11:07:00Z",
+      "total": "158.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5262,
+    "fields": {
+      "compra": 1118,
+      "livro": 7,
+      "quantidade": 2,
+      "preco": "56.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5263,
+    "fields": {
+      "compra": 1118,
+      "livro": 8,
+      "quantidade": 1,
+      "preco": "45.00"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1119,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 4,
+      "data": "2026-09-03T12:18:00Z",
+      "total": "242.98"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5264,
+    "fields": {
+      "compra": 1119,
+      "livro": 12,
+      "quantidade": 1,
+      "preco": "52.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5265,
+    "fields": {
+      "compra": 1119,
+      "livro": 13,
+      "quantidade": 3,
+      "preco": "37.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5266,
+    "fields": {
+      "compra": 1119,
+      "livro": 17,
+      "quantidade": 2,
+      "preco": "39.99"
+    }
+  },
+  {
+    "model": "core.compra",
+    "pk": 1120,
+    "fields": {
+      "usuario": 9,
+      "status": 2,
+      "tipo_pagamento": 5,
+      "data": "2026-09-05T13:29:00Z",
+      "total": "241.99"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5267,
+    "fields": {
+      "compra": 1120,
+      "livro": 20,
+      "quantidade": 2,
+      "preco": "30.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5268,
+    "fields": {
+      "compra": 1120,
+      "livro": 21,
+      "quantidade": 1,
+      "preco": "59.40"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5269,
+    "fields": {
+      "compra": 1120,
+      "livro": 24,
+      "quantidade": 2,
+      "preco": "21.00"
+    }
+  },
+  {
+    "model": "core.itenscompra",
+    "pk": 5270,
+    "fields": {
+      "compra": 1120,
+      "livro": 25,
+      "quantidade": 1,
+      "preco": "80.59"
+    }
+  }
+]

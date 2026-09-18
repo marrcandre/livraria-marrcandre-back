@@ -102,10 +102,10 @@ class ItensCompraInline(admin.StackedInline):  # Ou use TabularInline
 
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
-    list_display = ('id', 'usuario', 'status', 'total')
+    list_display = ('id', 'usuario', 'status', 'data', 'total')
     readonly_fields = ('data',)
     search_fields = ('usuario', 'status')
-    list_filter = ('usuario', 'status')
+    list_filter = ('usuario', 'status', 'data')
     ordering = ('status', 'usuario', 'data', 'total')
     list_per_page = 25
     inlines = [ItensCompraInline]
