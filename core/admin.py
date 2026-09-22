@@ -1,9 +1,6 @@
-"""
-Django admin customization.
-"""
-
-from django.contrib import admin
+from django.contrib.admin import ModelAdmin, StackedInline, display, register
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from core.models import (
@@ -18,7 +15,7 @@ from core.models import (
 )
 
 
-@admin.register(User)
+@register(User)
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
 
@@ -62,32 +59,32 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
-@admin.register(Autor)
-class AutorAdmin(admin.ModelAdmin):
+@register(Autor)
+class AutorAdmin(ModelAdmin):
     list_display = ('nome', 'email')
     search_fields = ('nome', 'email')
     list_filter = ('nome',)
     ordering = ('nome', 'email')
 
 
-@admin.register(Categoria)
-class CategoriaAdmin(admin.ModelAdmin):
+@register(Categoria)
+class CategoriaAdmin(ModelAdmin):
     list_display = ('descricao',)
     search_fields = ('descricao',)
     list_filter = ('descricao',)
     ordering = ('descricao',)
 
 
-@admin.register(Editora)
-class EditoraAdmin(admin.ModelAdmin):
+@register(Editora)
+class EditoraAdmin(ModelAdmin):
     list_display = ('nome',)
     search_fields = ('nome',)
     list_filter = ('nome',)
     ordering = ('nome',)
 
 
-@admin.register(Livro)
-class LivroAdmin(admin.ModelAdmin):
+@register(Livro)
+class LivroAdmin(ModelAdmin):
     list_display = ('titulo', 'editora', 'categoria')
     search_fields = ('titulo', 'editora__nome', 'categoria__descricao')
     list_filter = ('editora', 'categoria')
@@ -95,24 +92,65 @@ class LivroAdmin(admin.ModelAdmin):
     list_per_page = 25
 
 
-class ItensCompraInline(admin.StackedInline):  # Ou use TabularInline
+class ItensCompraInline(StackedInline):  # Ou use TabularInline
     model = ItensCompra
     extra = 1  # Quantidade de itens adicionais
 
 
-@admin.register(Compra)
-class CompraAdmin(admin.ModelAdmin):
-    list_display = ('id', 'usuario', 'status', 'data', 'total')
-    readonly_fields = ('data',)
+@register(Compra)
+class CompraAdmin(ModelAdmin):
+    list_display = ('usuario', 'status', 'total_formatado', 'data_relativa')
     search_fields = ('usuario', 'status')
     list_filter = ('usuario', 'status', 'data')
-    ordering = ('status', 'usuario', 'data', 'total')
-    list_per_page = 25
+    ordering = ('usuario', 'status', 'data')
+    list_per_page = 10
     inlines = [ItensCompraInline]
+    readonly_fields = ('total_formatado', 'data')
+
+    @display(description='Data', ordering='data')
+    def data_relativa(self, obj):
+        days_per_month = 30
+        months_per_year = 12
+        agora = timezone.localtime()
+        data = timezone.localtime(obj.data)
+        diff_days = (agora - data).days
+
+        if diff_days == 0:
+            return 'Hoje'
+        if diff_days == 1:
+            return 'Ontem'
+        if diff_days < days_per_month:
+            return f'Há {diff_days} dias'
+
+        total_months = diff_days // days_per_month
+
+        if total_months < months_per_year:
+            return (
+                'Há 1 mês'
+                if total_months == 1
+                else f'Há {total_months} meses'
+            )
+
+        years = total_months // months_per_year
+        months = total_months % months_per_year
+
+        if months == 0:
+            return 'Há 1 ano' if years == 1 else f'Há {years} anos'
+
+        years_text = '1 ano' if years == 1 else f'{years} anos'
+        months_text = '1 mês' if months == 1 else f'{months} meses'
+
+        return f'Há {years_text} e {months_text}'
+
+    @display(description="Total")
+    def total_formatado(self, obj):
+        """Exibe R$ 123.45 em vez de 123.45."""
+        return f"R$ {obj.total:.2f}"
 
 
-@admin.register(Favorito)
-class FavoritoAdmin(admin.ModelAdmin):
+
+@register(Favorito)
+class FavoritoAdmin(ModelAdmin):
     list_display = ('usuario', 'livro', 'nota', 'data_atualizacao')
     search_fields = ('usuario__email', 'livro__titulo', 'comentario')
     list_filter = ('nota', 'data_atualizacao')
