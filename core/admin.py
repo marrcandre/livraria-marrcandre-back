@@ -125,11 +125,7 @@ class CompraAdmin(ModelAdmin):
         total_months = diff_days // days_per_month
 
         if total_months < months_per_year:
-            return (
-                'Há 1 mês'
-                if total_months == 1
-                else f'Há {total_months} meses'
-            )
+            return 'Há 1 mês' if total_months == 1 else f'Há {total_months} meses'
 
         years = total_months // months_per_year
         months = total_months % months_per_year
@@ -142,11 +138,9 @@ class CompraAdmin(ModelAdmin):
 
         return f'Há {years_text} e {months_text}'
 
-    @display(description="Total")
+    @display(description='Total')
     def total_formatado(self, obj):
-        """Exibe R$ 123.45 em vez de 123.45."""
-        return f"R$ {obj.total:.2f}"
-
+        return f'R$ {obj.total:.2f}'
 
 
 @register(Favorito)

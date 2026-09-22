@@ -21,36 +21,36 @@ from core.serializers import (
 
 @extend_schema_view(
     list=extend_schema(
-        summary="Listar compras",
-        description="Retorna a lista de compras. Administradores e gerentes vêem todas as compras; usuários comuns vêem apenas as próprias.",
+        summary='Listar compras',
+        description='Retorna a lista de compras. Administradores e gerentes vêem todas as compras; usuários comuns vêem apenas as próprias.',
         responses={200: CompraListSerializer(many=True)},
     ),
     retrieve=extend_schema(
-        summary="Detalhar compra",
-        description="Retorna os dados completos de uma compra específica.",
+        summary='Detalhar compra',
+        description='Retorna os dados completos de uma compra específica.',
         responses={200: CompraSerializer},
     ),
     create=extend_schema(
-        summary="Criar compra",
-        description="Cria um novo carrinho de compras com os itens informados.",
+        summary='Criar compra',
+        description='Cria um novo carrinho de compras com os itens informados.',
         request=CompraCreateUpdateSerializer,
         responses={201: CompraCreateUpdateSerializer, 400: None},
     ),
     update=extend_schema(
-        summary="Atualizar compra",
-        description="Substitui todos os itens de uma compra existente.",
+        summary='Atualizar compra',
+        description='Substitui todos os itens de uma compra existente.',
         request=CompraCreateUpdateSerializer,
         responses={200: CompraCreateUpdateSerializer, 400: None, 404: None},
     ),
     partial_update=extend_schema(
-        summary="Atualizar compra parcialmente",
-        description="Atualiza parcialmente os itens de uma compra existente.",
+        summary='Atualizar compra parcialmente',
+        description='Atualiza parcialmente os itens de uma compra existente.',
         request=CompraCreateUpdateSerializer,
         responses={200: CompraCreateUpdateSerializer, 400: None, 404: None},
     ),
     destroy=extend_schema(
-        summary="Remover compra",
-        description="Remove uma compra do sistema.",
+        summary='Remover compra',
+        description='Remove uma compra do sistema.',
         responses={204: None, 404: None},
     ),
 )
@@ -66,12 +66,37 @@ class CompraViewSet(ModelViewSet):
     def get_queryset(self):
         usuario = self.request.user
         if usuario.is_superuser:
-            return Compra.objects.prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
+            return (
+                Compra.objects
+                .prefetch_related('itens')
+                .prefetch_related('itens__livro')
+                .prefetch_related('usuario')
+                .order_by('-id')
+            )
         if usuario.groups.filter(name='administradores'):
-            return Compra.objects.prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
+            return (
+                Compra.objects
+                .prefetch_related('itens')
+                .prefetch_related('itens__livro')
+                .prefetch_related('usuario')
+                .order_by('-id')
+            )
         if usuario.tipo_usuario == User.TipoUsuario.GERENTE:
-            return Compra.objects.prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
-        return Compra.objects.filter(usuario=usuario).prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
+            return (
+                Compra.objects
+                .prefetch_related('itens')
+                .prefetch_related('itens__livro')
+                .prefetch_related('usuario')
+                .order_by('-id')
+            )
+        return (
+            Compra.objects
+            .filter(usuario=usuario)
+            .prefetch_related('itens')
+            .prefetch_related('itens__livro')
+            .prefetch_related('usuario')
+            .order_by('-id')
+        )
 
     def get_serializer_class(self):
         if self.action == 'list':
@@ -81,21 +106,24 @@ class CompraViewSet(ModelViewSet):
         return CompraSerializer
 
     @extend_schema(
-        summary="Finalizar compra",
-        description="Finaliza a compra do carrinho do usuário autenticado. Retorna 400 se a compra já foi finalizada ou se algum item ultrapassar o estoque disponível.",
+        summary='Finalizar compra',
+        description='Finaliza a compra do carrinho do usuário autenticado. Retorna 400 se a compra já foi finalizada ou se algum item ultrapassar o estoque disponível.',
         responses={
             200: inline_serializer('FinalizarOkResponse', fields={'status': serializers.CharField()}),
-            400: inline_serializer('FinalizarErroResponse', fields={
-                'status': serializers.CharField(),
-                'livro': serializers.CharField(required=False),
-                'quantidade_disponivel': serializers.IntegerField(required=False),
-            }),
+            400: inline_serializer(
+                'FinalizarErroResponse',
+                fields={
+                    'status': serializers.CharField(),
+                    'livro': serializers.CharField(required=False),
+                    'quantidade_disponivel': serializers.IntegerField(required=False),
+                },
+            ),
             404: None,
         },
     )
     @action(detail=True, methods=['post'])
     def finalizar(self, request, pk=None):
-        ''' Finaliza a compra do carrinho de compras.'''
+        """Finaliza a compra do carrinho de compras."""
         compra = self.get_object()
 
         if compra.status != Compra.StatusCompra.CARRINHO:
@@ -125,16 +153,18 @@ class CompraViewSet(ModelViewSet):
         return Response(status=status.HTTP_200_OK, data={'status': 'Compra finalizada'})
 
     @extend_schema(
-        summary="Relatório de vendas do mês",
-        description="Gera um relatório com o total de vendas e a quantidade de vendas do mês atual.",
-        responses={200: inline_serializer(
-            name='RelatorioVendasMesResponse',
-            fields={
-                'status': serializers.CharField(),
-                'total_vendas': serializers.FloatField(),
-                'quantidade_vendas': serializers.IntegerField(),
-            },
-        )},
+        summary='Relatório de vendas do mês',
+        description='Gera um relatório com o total de vendas e a quantidade de vendas do mês atual.',
+        responses={
+            200: inline_serializer(
+                name='RelatorioVendasMesResponse',
+                fields={
+                    'status': serializers.CharField(),
+                    'total_vendas': serializers.FloatField(),
+                    'quantidade_vendas': serializers.IntegerField(),
+                },
+            )
+        },
     )
     @action(detail=False, methods=['get'])
     def relatorio_vendas_mes(self, request):
@@ -156,8 +186,8 @@ class CompraViewSet(ModelViewSet):
         )
 
     @extend_schema(
-        summary="Adicionar livro ao carrinho",
-        description="Adiciona um livro ao carrinho de compras do usuário autenticado.",
+        summary='Adicionar livro ao carrinho',
+        description='Adiciona um livro ao carrinho de compras do usuário autenticado.',
         request=CompraAdicionarLivroAoCarrinhoSerializer,
         responses={200: CompraSerializer, 400: None, 404: None},
     )

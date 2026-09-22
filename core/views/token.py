@@ -13,8 +13,8 @@ from rest_framework_simplejwt.views import (
 
 @extend_schema_view(
     post=extend_schema(
-        summary="Obter token JWT",
-        description="Autentica com e-mail e senha. Retorna access token e refresh token.",
+        summary='Obter token JWT',
+        description='Autentica com e-mail e senha. Retorna access token e refresh token.',
         request=TokenObtainPairSerializer,
         responses={200: TokenObtainPairSerializer, 401: None},
     )
@@ -25,8 +25,8 @@ class CustomTokenObtainPairView(TokenObtainPairView):
 
 @extend_schema_view(
     post=extend_schema(
-        summary="Atualizar token JWT",
-        description="Retorna um novo access token a partir do refresh token.",
+        summary='Atualizar token JWT',
+        description='Retorna um novo access token a partir do refresh token.',
         request=TokenRefreshSerializer,
         responses={200: TokenRefreshSerializer, 401: None},
     )
@@ -37,8 +37,8 @@ class CustomTokenRefreshView(TokenRefreshView):
 
 @extend_schema_view(
     post=extend_schema(
-        summary="Verificar token JWT",
-        description="Verifica se um token JWT (access ou refresh) é válido.",
+        summary='Verificar token JWT',
+        description='Verifica se um token JWT (access ou refresh) é válido.',
         request=TokenVerifySerializer,
         responses={200: None, 401: None},
     )

@@ -20,8 +20,17 @@ class UserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = [
-            'id', 'email', 'name', 'is_active', 'is_staff', 'is_superuser',
-            'last_login', 'groups', 'foto', 'foto_attachment_key', 'tipo_usuario',
+            'id',
+            'email',
+            'name',
+            'is_active',
+            'is_staff',
+            'is_superuser',
+            'last_login',
+            'groups',
+            'foto',
+            'foto_attachment_key',
+            'tipo_usuario',
         ]
         depth = 1
 
