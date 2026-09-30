@@ -1,6 +1,6 @@
 from django.db.models.aggregates import Sum
 from django_filters.rest_framework import DjangoFilterBackend
-from drf_spectacular.utils import extend_schema, extend_schema_view, inline_serializer
+from drf_spectacular.utils import OpenApiExample, OpenApiResponse, extend_schema, extend_schema_view, inline_serializer
 from rest_framework import serializers, status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -19,6 +19,7 @@ from core.serializers import (
     LivroRetrieveSerializer,
     LivroSerializer,
 )
+from core.views.openapi import AUTHENTICATION_ERROR, NOT_FOUND_ERROR, PERMISSION_ERROR, VALIDATION_ERROR
 
 
 @extend_schema_view(
@@ -78,8 +79,10 @@ class LivroViewSet(ModelViewSet):
         request=LivroAlterarPrecoSerializer,
         responses={
             200: inline_serializer('AlterarPrecoResponse', fields={'detail': serializers.CharField()}),
-            400: None,
-            404: None,
+            400: VALIDATION_ERROR,
+            401: AUTHENTICATION_ERROR,
+            403: PERMISSION_ERROR,
+            404: NOT_FOUND_ERROR,
         },
     )
     @action(detail=True, methods=['patch'])
@@ -109,8 +112,10 @@ class LivroViewSet(ModelViewSet):
                     'novo_estoque': serializers.IntegerField(),
                 },
             ),
-            400: None,
-            404: None,
+            400: VALIDATION_ERROR,
+            401: AUTHENTICATION_ERROR,
+            403: PERMISSION_ERROR,
+            404: NOT_FOUND_ERROR,
         },
     )
     @action(detail=True, methods=['post'])
@@ -131,8 +136,13 @@ class LivroViewSet(ModelViewSet):
 
     @extend_schema(
         summary='Lista os livros mais vendidos',
-        description='Retorna os livros que venderam mais de 10 unidades. Quando nenhum livro ultrapassar esse limite, retorna `{"detail": "Nenhum livro excedeu 10 vendas."}` com status 200.',
-        responses={200: LivroMaisVendidoSerializer(many=True)},
+        description='Retorna livros com mais de 10 itens associados a compras, sem filtrar o status da compra. Retorna uma lista vazia quando nenhum livro ultrapassa esse limite.',
+        responses={
+            200: OpenApiResponse(
+                response=LivroMaisVendidoSerializer(many=True),
+                examples=[OpenApiExample('Nenhum livro acima do limite', value=[], response_only=True)],
+            ),
+        },
     )
     @action(detail=False, methods=['get'])
     def mais_vendidos(self, request):
@@ -145,16 +155,19 @@ class LivroViewSet(ModelViewSet):
 
         serializer = LivroMaisVendidoSerializer(livros, many=True)
 
-        if not serializer.data:
-            return Response({'detail': 'Nenhum livro excedeu 10 vendas.'}, status=status.HTTP_200_OK)
-
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     @extend_schema(
         summary='Adicionar livro ao carrinho',
         description='Adiciona um livro ao carrinho de compras do usuário autenticado.',
         request=LivroAdicionarAoCarrinhoSerializer,
-        responses={200: CompraSerializer, 400: None, 404: None},
+        responses={
+            200: CompraSerializer,
+            400: VALIDATION_ERROR,
+            401: AUTHENTICATION_ERROR,
+            403: PERMISSION_ERROR,
+            404: NOT_FOUND_ERROR,
+        },
     )
     @action(detail=True, methods=['post'])
     def adicionar_ao_carrinho(self, request, pk=None):
@@ -180,9 +193,30 @@ class LivroViewSet(ModelViewSet):
 
     @extend_schema(
         summary='Favoritar livro',
-        description='Favorita um livro ou atualiza os dados (nota e/ou comentário) de um favorito existente.',
+        description='Cria um favorito ou atualiza um favorito existente. Se já existir, atualiza nota e/ou comentário.',
         request=FavoritoSerializer,
-        responses={200: FavoritoSerializer, 201: FavoritoSerializer, 400: None, 404: None},
+        responses={
+            200: FavoritoSerializer,
+            201: FavoritoSerializer,
+            400: VALIDATION_ERROR,
+            401: AUTHENTICATION_ERROR,
+            403: PERMISSION_ERROR,
+            404: NOT_FOUND_ERROR,
+        },
+        methods=['POST'],
+    )
+    @extend_schema(
+        summary='Atualizar favorito',
+        description='Atualiza nota e/ou comentário de um favorito existente. Retorna 404 se o livro ainda não estiver favoritado.',
+        request=FavoritoSerializer,
+        responses={
+            200: FavoritoSerializer,
+            400: VALIDATION_ERROR,
+            401: AUTHENTICATION_ERROR,
+            403: PERMISSION_ERROR,
+            404: NOT_FOUND_ERROR,
+        },
+        methods=['PUT', 'PATCH'],
     )
     @action(detail=True, methods=['post', 'put', 'patch'])
     def favoritar(self, request, pk=None):

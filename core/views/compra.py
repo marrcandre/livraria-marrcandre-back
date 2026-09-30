@@ -1,7 +1,7 @@
 from django.db import transaction
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
-from drf_spectacular.utils import extend_schema, extend_schema_view, inline_serializer
+from drf_spectacular.utils import OpenApiExample, OpenApiResponse, extend_schema, extend_schema_view, inline_serializer
 from rest_framework import serializers, status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -17,6 +17,7 @@ from core.serializers import (
     CompraListSerializer,
     CompraSerializer,
 )
+from core.views.openapi import AUTHENTICATION_ERROR, NOT_FOUND_ERROR, VALIDATION_ERROR
 
 
 @extend_schema_view(
@@ -108,17 +109,37 @@ class CompraViewSet(ModelViewSet):
     @extend_schema(
         summary='Finalizar compra',
         description='Finaliza a compra do carrinho do usuário autenticado. Retorna 400 se a compra já foi finalizada ou se algum item ultrapassar o estoque disponível.',
+        request=None,
         responses={
-            200: inline_serializer('FinalizarOkResponse', fields={'status': serializers.CharField()}),
-            400: inline_serializer(
-                'FinalizarErroResponse',
-                fields={
-                    'status': serializers.CharField(),
-                    'livro': serializers.CharField(required=False),
-                    'quantidade_disponivel': serializers.IntegerField(required=False),
-                },
+            200: OpenApiResponse(
+                response=inline_serializer('FinalizarOkResponse', fields={'status': serializers.CharField()}),
+                examples=[OpenApiExample('Compra finalizada', value={'status': 'Compra finalizada'}, response_only=True)],
             ),
-            404: None,
+            400: OpenApiResponse(
+                response=inline_serializer(
+                    'FinalizarErroResponse',
+                    fields={
+                        'status': serializers.CharField(),
+                        'livro': serializers.CharField(required=False),
+                        'quantidade_disponivel': serializers.IntegerField(required=False),
+                    },
+                ),
+                description='Compra já finalizada ou estoque insuficiente para um dos itens.',
+                examples=[
+                    OpenApiExample('Compra já finalizada', value={'status': 'Compra já finalizada'}, response_only=True),
+                    OpenApiExample(
+                        'Estoque insuficiente',
+                        value={
+                            'status': 'Quantidade insuficiente',
+                            'livro': 'Título do livro',
+                            'quantidade_disponivel': 2,
+                        },
+                        response_only=True,
+                    ),
+                ],
+            ),
+            401: AUTHENTICATION_ERROR,
+            404: NOT_FOUND_ERROR,
         },
     )
     @action(detail=True, methods=['post'])
@@ -154,13 +175,14 @@ class CompraViewSet(ModelViewSet):
 
     @extend_schema(
         summary='Relatório de vendas do mês',
-        description='Gera um relatório com o total de vendas e a quantidade de vendas do mês atual.',
+        description='Retorna o total e a quantidade de compras finalizadas desde o primeiro dia do mês atual, no fuso horário configurado no servidor.',
+        request=None,
         responses={
             200: inline_serializer(
                 name='RelatorioVendasMesResponse',
                 fields={
                     'status': serializers.CharField(),
-                    'total_vendas': serializers.FloatField(),
+                    'total_vendas': serializers.DecimalField(max_digits=10, decimal_places=2),
                     'quantidade_vendas': serializers.IntegerField(),
                 },
             )
@@ -187,9 +209,14 @@ class CompraViewSet(ModelViewSet):
 
     @extend_schema(
         summary='Adicionar livro ao carrinho',
-        description='Adiciona um livro ao carrinho de compras do usuário autenticado.',
+        description='Adiciona um livro ao carrinho do usuário autenticado. Retorna 201 quando cria o carrinho e 200 quando reutiliza um carrinho existente.',
         request=CompraAdicionarLivroAoCarrinhoSerializer,
-        responses={200: CompraSerializer, 400: None, 404: None},
+        responses={
+            200: CompraSerializer,
+            201: CompraSerializer,
+            400: VALIDATION_ERROR,
+            401: AUTHENTICATION_ERROR,
+        },
     )
     @action(detail=False, methods=['post'])
     def adicionar_ao_carrinho(self, request):
