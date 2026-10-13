@@ -1,6 +1,14 @@
 from django.db.models.aggregates import Sum
 from django_filters.rest_framework import DjangoFilterBackend
-from drf_spectacular.utils import OpenApiExample, OpenApiResponse, extend_schema, extend_schema_view, inline_serializer
+from drf_spectacular.utils import (
+    OpenApiExample,
+    OpenApiParameter,
+    OpenApiResponse,
+    OpenApiTypes,
+    extend_schema,
+    extend_schema_view,
+    inline_serializer,
+)
 from rest_framework import serializers, status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -25,7 +33,15 @@ from core.views.openapi import AUTHENTICATION_ERROR, NOT_FOUND_ERROR, PERMISSION
 @extend_schema_view(
     list=extend_schema(
         summary='Listar livros',
-        description='Retorna a lista paginada de livros. Suporta filtro por categoria e editora, busca por título e ordenação.',
+        description=(
+            'Retorna livros paginados, ordenados por título por padrão. '
+            'Permite filtrar por categoria (categoria__descricao) e editora (editora__nome) '
+            'com correspondência exata, e por quantidade e preço com valores exatos '
+            'ou limites mínimo (__gte) e máximo (__lte). '
+            'O parâmetro search busca no título; ordering aceita titulo ou preco, '
+            'com o prefixo "-" para ordem decrescente. '
+            'A paginação aceita page e page_size, com 10 itens por padrão e máximo de 100.'
+        ),
         responses={200: LivroListSerializer(many=True)},
     ),
     retrieve=extend_schema(
@@ -248,3 +264,26 @@ class LivroViewSet(ModelViewSet):
 
         status_code = status.HTTP_200_OK if favorito else status.HTTP_201_CREATED
         return Response(serializer.data, status=status_code)
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name='search',
+                type=OpenApiTypes.STR,
+                location=OpenApiParameter.QUERY,
+                description='Pesquisa livros pelo título.',
+            ),
+            OpenApiParameter(
+                name='ordering',
+                type=OpenApiTypes.STR,
+                location=OpenApiParameter.QUERY,
+                description=(
+                    'Campo de ordenação: titulo ou preco. '
+                    'Prefixe com "-" para ordem decrescente; '
+                    'por exemplo, -preco.'
+                ),
+            ),
+        ],
+    )
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
