@@ -60,7 +60,12 @@ from core.views.openapi import AUTHENTICATION_ERROR, NOT_FOUND_ERROR, PERMISSION
 class LivroViewSet(ModelViewSet):
     queryset = Livro.objects.order_by('-id')
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filterset_fields = ['categoria__descricao', 'editora__nome']
+    filterset_fields = {
+        'categoria__descricao': ['exact'],
+        'editora__nome': ['exact'],
+        'quantidade': ['exact', 'gte', 'lte'],
+        'preco': ['exact', 'gte', 'lte'],
+    }
     search_fields = ['titulo']
     ordering_fields = ['titulo', 'preco']
     ordering = ['titulo']
